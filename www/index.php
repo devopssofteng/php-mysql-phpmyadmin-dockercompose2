@@ -17,7 +17,7 @@
 
     <?php
 
-    $conn = mysqli_connect('65.0.76.254:3306', 'user', 'test', "myDb");
+    $conn = mysqli_connect('localhost', 'user', 'test', "myDb");
 
 
     $query = 'SELECT * From Person';
