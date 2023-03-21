@@ -4,7 +4,7 @@
  <head>
   <title>Hello...</title>
 
-  <meta charset="utf-8"> 
+  
 
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
@@ -17,11 +17,11 @@
 
     <?php
 
-    $conn = mysql_connect('db', 'user', 'test', "myDb");
+    $conn = mysqli_connect('db', 'user', 'test', "myDb");
 
 
     $query = 'SELECT * From Person';
-    $result = mysql_query($conn, $query);
+    $result = mysqli_query($conn, $query);
 
     echo '<table class="table table-striped">';
     echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
@@ -38,7 +38,7 @@
 
     $result->close();
 
-    mysql_close($conn);
+    mysqli_close($conn);
 
     ?>
     </div>
