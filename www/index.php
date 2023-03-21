@@ -17,11 +17,11 @@
 
     <?php
 
-    $conn = mysqli_connect('65.0.76.254', 'user', 'test', "myDb");
+    $conn = mysql_connect('db', 'user', 'test', "myDb");
 
 
     $query = 'SELECT * From Person';
-    $result = mysqli_query($conn, $query);
+    $result = mysql_query($conn, $query);
 
     echo '<table class="table table-striped">';
     echo '<thead><tr><th></th><th>id</th><th>name</th></tr></thead>';
@@ -38,7 +38,7 @@
 
     $result->close();
 
-    mysqli_close($conn);
+    mysql_close($conn);
 
     ?>
     </div>
